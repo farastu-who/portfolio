@@ -155,7 +155,7 @@ h2::selection {
 
 /* project 1 */
 .card:nth-child(1) {
-  background: url(../assets/project/project-one.png) center center/cover;
+  background: url(../assets/project/gamification.png) center center/cover;
 }
 
 /* Project 2 */
@@ -191,6 +191,11 @@ h2::selection {
 /* Project 8 */
 .card:nth-child(8) {
   background: url(../assets/project/uber.png) center center/cover;
+}
+
+/* Project 9 */
+.card:nth-child(9) {
+  background: url(../assets/project/polar.png) center center/cover;
 }
 
 /* Media Queries */

@@ -197,6 +197,10 @@ body {
   margin-top: 10px; /* Create some space between the image and text */
   position: static;
   transition: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  padding: 1rem; /* Add some padding around the text */
+  margin: 1rem 0; /* Optional: Adds some space outside the element */
+  border-radius: 5px; /* Optional: Adds rounded corners to the background */
 }
 
 .project-bio {
@@ -209,6 +213,10 @@ body {
   opacity: 1; /* Ensure visibility */
   z-index: 2; /* Position above the image */
   margin-top: 10px; /* Create some space between the image and text */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  padding: 1rem; /* Add some padding around the text */
+  margin: 1rem 0; /* Optional: Adds some space outside the element */
+  border-radius: 5px; /* Optional: Adds rounded corners to the background */
 }
 
 /* Footer */
