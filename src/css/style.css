@@ -192,18 +192,23 @@ body {
 .project-info {
   display: flex;
   justify-content: space-between;
-  opacity: 0;
-  position: relative;
-  transition: 0.5s ease-in-out;
+  opacity: 1; /* Ensure visibility */
+  z-index: 2; /* Position above the image */
+  margin-top: 10px; /* Create some space between the image and text */
+  position: static;
+  transition: none;
 }
 
 .project-bio {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  position: relative;
-  top: 160px;
-  left: 10px;
+  position: static;
+  top: 0;
+  left: 0;
+  opacity: 1; /* Ensure visibility */
+  z-index: 2; /* Position above the image */
+  margin-top: 10px; /* Create some space between the image and text */
 }
 
 /* Footer */
