@@ -136,7 +136,7 @@ h2::selection {
 
 /* project 1 */
 .card:nth-child(1) {
-  background: url(../assets/project/project-one.png) center center/cover;
+  background: url(../assets/project/gamification.png) center center/cover;
 }
 
 /* Project 2 */
@@ -162,6 +162,11 @@ h2::selection {
 /* Project 6 */
 .card:nth-child(6) {
   background: url(../assets/project/project-six.png) center center/cover;
+}
+
+/* Project 7 */
+.card:nth-child(1) {
+  background: url(../assets/project/gpstar.jpg) center center/cover;
 }
 
 /* Media Queries */
