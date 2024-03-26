@@ -9,8 +9,8 @@
 /* variables */
 :root {
   /* Colors */
-  --primary-color: #ffcd42;
-  --secondary-color: #ffd35c;
+  --primary-color: #4dbeb4;
+  --secondary-color: #8cd5cf;
   --bg-primary: #ffffff;
   --text-color: #222222;
   --text-color-two: #ffffff;
@@ -32,8 +32,8 @@
 }
 
 [data-theme="dark"] {
-  --primary-color: #ffcd42;
-  --secondary-color: #ffd35c;
+  --primary-color: #4dbeb4;
+  --secondary-color: #8cd5cf;
   --bg-primary: #000000;
   --text-color: #ffffff;
   --text-color-two: #222222;
@@ -41,6 +41,7 @@
   --card-background: #111111;
   --bg-secondary-two: #f4f4f4;
   --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
+  --research-text-color: #ffffff;
 }
 
 html {
@@ -162,6 +163,23 @@ body {
   background-color: var(--card-background);
   margin: 5.5rem 0;
 }
+/* Social Icons */
+.social-icons {
+  display: flex; /* This will place all child elements in a row */
+  justify-content: center; /* This will center the icons horizontally */
+  align-items: center; /* This will center the icons vertically */
+  gap: 50px; /* This adds space between the icons */
+}
+
+.social-icons a {
+  color: inherit; /* Optional: Ensures the icons inherit the text color from the parent */
+  text-decoration: none; /* Removes the underline from the links */
+}
+
+.social-icons a i {
+  font-size: 24px; /* or any other size you prefer */
+}
+
 /* Projects */
 #projects {
   display: flex;
@@ -191,32 +209,85 @@ body {
 
 .project-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Align items to the center */
+  align-items: center; /* Center items vertically if needed */
   opacity: 1; /* Ensure visibility */
   z-index: 2; /* Position above the image */
-  margin-top: 10px; /* Create some space between the image and text */
-  position: static;
+  margin-top: 15px; /* Create some space between the image and text */
+  position: absolute; /* Position it absolutely within the card */
+  bottom: 0; /* Align it to the bottom of the card */
+  left: 0; /* Align it to the left of the card */
+  right: 0; 
   transition: none;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
-  padding: 1rem; /* Add some padding around the text */
-  margin: 1rem 0; /* Optional: Adds some space outside the element */
-  border-radius: 5px; /* Optional: Adds rounded corners to the background */
+  width: 100%; /* Ensure it stretches across the card */
 }
 
 .project-bio {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  position: static;
-  top: 0;
-  left: 0;
-  opacity: 1; /* Ensure visibility */
-  z-index: 2; /* Position above the image */
-  margin-top: 10px; /* Create some space between the image and text */
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
-  padding: 1rem; /* Add some padding around the text */
-  margin: 1rem 0; /* Optional: Adds some space outside the element */
-  border-radius: 5px; /* Optional: Adds rounded corners to the background */
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Position it absolutely within the card */
+  bottom: 0; /* Align it to the bottom of the card */
+  left: 0; /* Align it to the left of the card */
+  right: 0; /* Align it to the right of the card */
+  margin: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  color: #000000;
+  padding: 1rem;
+  margin-top: 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Research section */
+.research-container {
+  /* Container styles if needed */
+}
+
+.division {
+  /* Division styles if needed */
+}
+
+.content-text {
+  text-align: center;
+  margin-bottom: 2rem; /* Add some space below the heading and description */
+}
+
+.research-item {
+  margin-bottom: 1.5rem; /* Space between each research item */
+}
+
+.research-item h3 {
+  font-size: 1.2rem; /* Larger font size for the paper title */
+  margin-bottom: 0.5rem; /* Space below the title */
+  color: #222; /* Dark text color for the title */
+}
+
+.research-item p {
+  font-size: 1rem; /* Font size for the description */
+  color: #666; /* Lighter text color for the description */
+  margin-bottom: 1rem; /* Space below the description */
+}
+
+.research-item a {
+  font-size: 0.9rem; /* Font size for the link */
+  color: #0044cc; /* Link color */
+  text-decoration: underline; /* Underline the link for clarity */
+  display: inline-block; /* Align the link properly */
+}
+
+[data-theme="dark"] .research-item h3,
+[data-theme="dark"] .research-item p,
+[data-theme="dark"] .research-item a {
+  color: var(--research-text-color);
+}
+
+.btn-secondary {
+  display: block; /* Make the button take its own line */
+  width: fit-content; /* Adjust the width to fit its content */
+  margin: 2rem auto; /* Center the button and add margin above and below */
 }
 
 /* Footer */
