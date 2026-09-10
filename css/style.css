@@ -83,6 +83,39 @@ body {
   line-height: 1.5;
 }
 
+/* Hero bloom
+   The painting is masked into an 8px dot screen, so it reads as grain rather
+   than as a second image competing with the content. z-index -1 keeps it above
+   the graph paper on <body> but behind everything in flow. The ::after clears
+   the middle for the hero text and lands the bloom before the Projects grid. */
+.bloom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 900px;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background-image: url(../assets/painting-oosterwijck.jpg);
+  background-size: cover;
+  background-position: center 12%;
+  opacity: 0.64;
+  -webkit-mask-image: radial-gradient(circle at center, #000 26%, transparent 28%);
+  -webkit-mask-size: 8px 8px;
+  mask-image: radial-gradient(circle at center, #000 26%, transparent 28%);
+  mask-size: 8px 8px;
+}
+
+.bloom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 640px 330px at 50% 43%, #141416 0%, #141416 50%, rgba(20, 20, 22, 0) 79%),
+    linear-gradient(180deg, rgba(20, 20, 22, 0) 52%, #141416 95%);
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
@@ -284,6 +317,13 @@ body {
 
 #footer a:hover {
   opacity: 0.6;
+}
+
+.art-credit {
+  margin-top: 0.4rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: #8e8a80;
 }
 
 #footer .social {
