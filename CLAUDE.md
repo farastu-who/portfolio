@@ -64,6 +64,8 @@ The card in `index.html` carries that class alongside `.card`:
 
 This replaced an earlier `.card:nth-child(n)` scheme where images were assigned by DOM position, so inserting or reordering a project silently reassigned every image after it. Reordering is now safe. **When you add a project, add its class rule in the same commit** — a card with no image class gets no background.
 
+The EliseAI cards additionally carry `<img class="card-logo">` — the official EliseAI wordmark, saved to `assets/project/eliseai-logo.svg` from their site CDN. The supplied file is a **black** mark, so `.card-logo` inverts it to white over the dark cards, and `.detail-logo` inverts it again under `[data-theme="dark"]` inside the dialog. If you replace the asset with a white or coloured variant, drop those `filter: invert(1)` rules.
+
 Card internals: an empty `.card-wrapper` overlay and a `.project-info` block absolutely pinned to the card bottom holding the title and tags. Note that `.project-bio` paints over `.project-link`, so the `href="#"` icon placeholders on the older cards are invisible as well as unwired.
 
 ## Project detail dialog
