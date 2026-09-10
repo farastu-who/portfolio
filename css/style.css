@@ -25,10 +25,6 @@
 
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 
-  /* EliseAI brand accent, used in the detail dialog */
-  --elise-violet: #a880ff;
-  --elise-violet-static: #7638fb;
-  --elise-violet-soft: rgba(168, 128, 255, 0.16);
   --detail-accent-default: #6fd3c9;
   --detail-soft-default: rgba(111, 211, 201, 0.14);
   --teal-static: #6fd3c9;
@@ -286,6 +282,12 @@ body {
   font-size: 1.05rem;
   color: var(--text-muted);
   margin-bottom: 1rem; /* Space below the description */
+}
+
+/* Others: Teaching / Volunteer / Awards. Scoped to #others so the Research
+   section's paper titles, which share .research-item h3, stay unchanged. */
+#others .research-item h3 {
+  color: var(--primary-color);
 }
 
 .research-item a {

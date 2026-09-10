@@ -210,17 +210,48 @@ h2::selection {
   background: url(../assets/project/planner-app.svg) center center/cover;
 }
 
-/* EliseAI wordmark, used in the detail dialog. The supplied asset is a black
-   mark, so it is inverted in dark mode. The project cards use real product
-   screenshots that already carry the branding, so they get no overlay. */
-.detail-logo {
-  width: 96px;
-  height: auto;
-  margin-bottom: 0.4rem;
+/* Brand lockups in the detail dialog.
+   Heights are per-brand because the marks have very different proportions.
+   Only Hitachi's is a black mark, so only it is inverted - previously this
+   depended on a stray data-theme="dark" attribute still being on <html>. */
+.detail-brand {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.55rem;
 }
 
-[data-theme="dark"] .detail-logo {
+.detail-brand span {
+  font-size: 0.72rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--detail-accent);
+}
+
+.detail-logo {
+  display: block;
+  height: 20px;
+  width: auto;
+}
+
+.detail-logo.is-elise {
+  height: 20px;
   filter: invert(1);
+}
+
+.detail-logo.is-gp {
+  height: 26px;
+}
+
+.detail-logo.is-hitachi {
+  height: 15px;
+  filter: invert(1);
+}
+
+.detail-logo.is-cub {
+  height: 22px;
 }
 
 /* Cards that open a detail dialog */
@@ -239,10 +270,6 @@ h2::selection {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-color);
-}
-
-.card[data-brand="elise"] .project-cue {
-  color: var(--elise-violet);
 }
 
 .card[data-details]:hover .project-cue i {
@@ -304,11 +331,6 @@ h2::selection {
   font-size: 1rem;
   cursor: pointer;
   transition: 0.25s ease-in-out;
-}
-
-.project-modal[data-brand="elise"] .project-modal-dialog {
-  --detail-accent: var(--elise-violet);
-  --detail-soft: var(--elise-violet-soft);
 }
 
 .project-modal-close:hover {

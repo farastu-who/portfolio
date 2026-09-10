@@ -52,13 +52,6 @@ if (projectModal && projectModalBody) {
       title ? title.textContent.trim() : "Project details"
     );
 
-    // Drives the dialog's accent colour (see --detail-accent in utilities.css)
-    if (card.dataset.brand) {
-      projectModal.dataset.brand = card.dataset.brand;
-    } else {
-      delete projectModal.dataset.brand;
-    }
-
     lastFocused = card;
     projectModal.hidden = false;
     document.body.style.overflow = "hidden";
