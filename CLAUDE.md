@@ -65,7 +65,7 @@ The card in `index.html` carries that class alongside `.card`:
 
 This replaced an earlier `.card:nth-child(n)` scheme where images were assigned by DOM position, so inserting or reordering a project silently reassigned every image after it. Reordering is now safe. **When you add a project, add its class rule in the same commit** — a card with no image class gets no background.
 
-The EliseAI cards additionally carry `<img class="card-logo">` — the official EliseAI wordmark, saved to `assets/project/eliseai-logo.svg` from their site CDN. The supplied file is a **black** mark, so `.card-logo` inverts it to white over the dark cards, and `.detail-logo` inverts it again under `[data-theme="dark"]` inside the dialog. If you replace the asset with a white or coloured variant, drop those `filter: invert(1)` rules.
+The three EliseAI cards use real product screenshots (`.png`/`.jpg`); every other card uses an SVG authored for this site. The EliseAI wordmark lives at `assets/project/eliseai-logo.svg` and is used only in the detail dialog, via `.detail-logo` — the screenshots already carry the branding, so the cards get no logo overlay. That asset is a **black** mark, so `.detail-logo` inverts it under `[data-theme="dark"]`; drop that `filter: invert(1)` if you swap in a white variant.
 
 Card internals: an empty `.card-wrapper` overlay and a `.project-info` block absolutely pinned to the card bottom holding the title and tags. Note that `.project-bio` paints over `.project-link`, so the `href="#"` icon placeholders on the older cards are invisible as well as unwired.
 
@@ -73,7 +73,7 @@ Card internals: an empty `.card-wrapper` overlay and a `.project-info` block abs
 
 Cards that open a detail dialog carry `data-details="<key>"` plus `role="button"` and `tabindex="0"`, and contain a `<template data-details-for="<key>">` holding the detail copy. The `#project-modal` shell sits just before `<footer>`; `js/script.js` clones the matching template into it on click or Enter/Space, and handles Escape, backdrop click, scroll lock, focus return, and a Tab focus trap.
 
-**All detail copy lives in `index.html` inside those templates** — it is plain markup, edit it directly. A card without `data-details` is simply not clickable — currently only Polar Bear, which has no sourced write-up.
+**All detail copy lives in `index.html` inside those templates** — it is plain markup, edit it directly. A card without `data-details` is simply not clickable. Every card currently has one.
 
 Styling hooks: `.detail-eyebrow`, `.detail-title`, `.detail-list`, `.detail-metrics` / `.detail-metric`, `.detail-links`, `.detail-tags`. The `.detail-metrics` and `.detail-links` blocks are optional — omit them for a project with no headline numbers or no public repo.
 

@@ -171,15 +171,15 @@ h2::selection {
 
 /* EliseAI */
 .card-elise-crm {
-  background: url(../assets/project/elise-crm-discovery.svg) center center/cover;
+  background: url(../assets/project/elise-crm-discovery.png) center center/cover;
 }
 
 .card-elise-reporting {
-  background: url(../assets/project/elise-reporting-architecture.svg) center center/cover;
+  background: url(../assets/project/elise-reporting-architecture.jpg) center center/cover;
 }
 
 .card-elise-golive {
-  background: url(../assets/project/elise-golive-pipeline.svg) center center/cover;
+  background: url(../assets/project/elise-golive-pipeline.png) center center/cover;
 }
 
 /* Earlier work */
@@ -215,9 +215,6 @@ h2::selection {
   background: url(../assets/project/uber.png) center center/cover;
 }
 
-.card-polar-bear {
-  background: url(../assets/project/polar.png) center center/cover;
-}
 
 /* Personal & research projects */
 .card-promptpulse {
@@ -236,20 +233,9 @@ h2::selection {
   background: url(../assets/project/planner-app.svg) center center/cover;
 }
 
-/* EliseAI wordmark.
-   The supplied asset is a black mark, so it is inverted to white over the
-   dark project cards, and inverted again in dark mode inside the dialog. */
-.card-logo {
-  position: absolute;
-  top: 1.15rem;
-  left: 1.15rem;
-  width: 78px;
-  height: auto;
-  z-index: 2;
-  opacity: 0.95;
-  filter: invert(1);
-}
-
+/* EliseAI wordmark, used in the detail dialog. The supplied asset is a black
+   mark, so it is inverted in dark mode. The project cards use real product
+   screenshots that already carry the branding, so they get no overlay. */
 .detail-logo {
   width: 96px;
   height: auto;
