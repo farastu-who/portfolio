@@ -103,53 +103,32 @@ h2::selection {
   padding: 0.5rem;
   margin: 0 auto;
   max-width: 700px;
+  font-size: 1.08rem;
+  color: var(--text-muted);
 }
 
-/* Project cards */
+/* Project cards: image block on top, label text on the page beneath it */
 .card {
-  padding: 1rem;
-  background: none;
-  color: #ffffff;
-  border-radius: 5px;
-  transition: 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
-  position: relative;
-  display: flex; /* Use flex layout to better manage child elements */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: flex-end; /* Adjust text to the bottom */
-  width: 100%; /* Ensure card stretches to fill its container */
-  max-width: 100%; /* Prevent it from stretching beyond its parent */
+  background: none;
+  color: var(--text-color);
 }
 
-.card-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1rem; /* Respect the .card's padding */
-  box-sizing: border-box;
+.card-shot {
+  height: 200px;
+  border-radius: 6px;
+  border: 1px solid rgba(240, 237, 228, 0.1);
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s ease-in-out;
 }
 
-
-.card a {
-  color: #ffffff;
-  transition: 0.25s ease-in-out;
-  font-size: 1.1rem;
-  margin-right: 0.3rem;
+.card:hover .card-shot {
+  border-color: rgba(240, 237, 228, 0.3);
 }
 
-.card a:hover {
-  color: var(--primary-color);
-}
-
-.card:hover {
-  box-shadow: inset 0 100px 1000px 10px rgba(0, 0, 0, 0.8);
-}
-
-.card:hover .project-info {
-  opacity: 1;
-}
 
 /* Project Images
    Each card's image is bound to its own class rather than its position, so
@@ -157,66 +136,66 @@ h2::selection {
    image of every card after it. Add a class here when you add a card. */
 
 /* EliseAI */
-.card-elise-crm {
+.card-elise-crm .card-shot {
   background: url(../assets/project/elise-crm-discovery.png) center center/cover;
 }
 
-.card-elise-reporting {
+.card-elise-reporting .card-shot {
   background: url(../assets/project/elise-reporting-architecture.png) center center/cover;
 }
 
-.card-elise-golive {
+.card-elise-golive .card-shot {
   background: url(../assets/project/elise-golive-pipeline.jpg) center center/cover;
 }
 
 /* Earlier work */
-.card-gamification {
+.card-gamification .card-shot {
   background: url(../assets/project/gamification.png) center center/cover;
 }
 
-.card-intersectional-fairness {
+.card-intersectional-fairness .card-shot {
   background: url(../assets/project/IF.png) center center/cover;
 }
 
-.card-transmission-lines {
+.card-transmission-lines .card-shot {
   background: url(../assets/project/tl.png) center center/cover;
 }
 
-.card-referral {
+.card-referral .card-shot {
   background: url(../assets/project/referral.png) center center/cover;
 }
 
-.card-easynet {
+.card-easynet .card-shot {
   background: url(../assets/project/easynet.png) center center/cover;
 }
 
-.card-tiktok {
+.card-tiktok .card-shot {
   background: url(../assets/project/tiktok.png) center center/cover;
 }
 
-.card-gpstar {
+.card-gpstar .card-shot {
   background: url(../assets/project/gpstar.png) center center/cover;
 }
 
-.card-digital-partnerships {
+.card-digital-partnerships .card-shot {
   background: url(../assets/project/uber.png) center center/cover;
 }
 
 
 /* Personal & research projects */
-.card-promptpulse {
+.card-promptpulse .card-shot {
   background: url(../assets/project/promptpulse.svg) center center/cover;
 }
 
-.card-msp-recsys {
+.card-msp-recsys .card-shot {
   background: url(../assets/project/msp-recsys.svg) center center/cover;
 }
 
-.card-inventory {
+.card-inventory .card-shot {
   background: url(../assets/project/inventory-system.svg) center center/cover;
 }
 
-.card-planner {
+.card-planner .card-shot {
   background: url(../assets/project/planner-app.svg) center center/cover;
 }
 
@@ -248,11 +227,11 @@ h2::selection {
   font-weight: var(--weight-semibold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--teal-static);
+  color: var(--primary-color);
 }
 
 .card[data-brand="elise"] .project-cue {
-  color: var(--elise-violet-static);
+  color: var(--elise-violet);
 }
 
 .card[data-details]:hover .project-cue i {
