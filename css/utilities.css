@@ -11,6 +11,17 @@
   padding: 1rem 2rem;
 }
 
+/* Lock the container to the graph paper at any viewport width.
+   The grid is centred, so vertical lines sit at centre +/- (8 + 16n). For both
+   container edges to land on a line, its width must be congruent to 16 (mod 32)
+   -- hence rounding down to a multiple of 32 and taking 16 off. Browsers without
+   CSS round() simply keep the unsnapped width above. */
+@supports (width: round(down, 100px, 32px)) {
+  .container {
+    width: calc(round(down, 100%, 32px) - 16px);
+  }
+}
+
 h1::selection,
 h2::selection {
   color: #111;
