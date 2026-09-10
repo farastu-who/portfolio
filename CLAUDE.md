@@ -31,7 +31,9 @@ python3 -m http.server 5501
 
 `.vscode/settings.json` pins VS Code Live Server to port 5501. `.gitpod.yml` is an unmodified template stub (both tasks are `echo 'TODO'`) and does not build or run anything.
 
-Deployment is GitHub Pages. `_config.yml` sets `theme: jekyll-theme-cayman`, but since `index.html` sits at the repo root it is served as-is and the Jekyll theme has no visible effect.
+Deployment is GitHub Pages at https://farastu-who.github.io/portfolio/, which serves `index.html` directly as a static file. There is no Jekyll front matter anywhere and no `_config.yml`, so nothing is templated or preprocessed — what is in the repo is what ships.
+
+Do not add a Jekyll theme or front matter to `index.html`. Its `<html>`/`<head>`/`<body>` wrapper and custom stylesheets are the whole design; a theme layout would nest the page inside its own document and override it.
 
 ## Structure
 
