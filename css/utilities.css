@@ -33,7 +33,9 @@ h2::selection {
 }
 
 .btn-secondary {
-  margin: 5px 0;
+  display: block;
+  width: fit-content;
+  margin: 2rem auto;
   background-color: var(--bg-secondary);
   color: var(--bg-primary);
 }
@@ -129,21 +131,6 @@ h2::selection {
   box-sizing: border-box;
 }
 
-.card-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 70%;
-  height: 60%;
-  border-radius: 5px 5px 0 0;
-  z-index: -1; 
-  background-size: contain; /* Adjust so the full image is always visible */
-  background-repeat: no-repeat; /* Prevent image from repeating */
-  background-position: center 20%; /* Center the image within the area */
-  opacity: 0.2; /* Set to desired opacity level */
-  align-self: center; /* Center the image within the card */
-  margin-bottom: auto; /* Push the content to the bottom */
-}
 
 .card a {
   color: #ffffff;

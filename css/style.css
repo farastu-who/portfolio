@@ -268,11 +268,6 @@ body {
   /* Division styles if needed */
 }
 
-.content-text {
-  text-align: center;
-  margin-bottom: 2rem; /* Add some space below the heading and description */
-}
-
 .research-item {
   margin-bottom: 1.5rem; /* Space between each research item */
 }
@@ -300,12 +295,6 @@ body {
 [data-theme="dark"] .research-item p,
 [data-theme="dark"] .research-item a {
   color: var(--research-text-color);
-}
-
-.btn-secondary {
-  display: block; /* Make the button take its own line */
-  width: fit-content; /* Adjust the width to fit its content */
-  margin: 2rem auto; /* Center the button and add margin above and below */
 }
 
 /* Footer */
