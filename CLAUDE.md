@@ -42,27 +42,40 @@ Everything lives in three files:
 - `index.html` — all content, hardcoded. Sections in order: `#hero` (fixed navbar + profile), `#projects`, `#research`, `#others` (reuses the `.research-container` classes), `#footer`.
 - `css/style.css` — CSS custom properties, reset, navbar, hero, the projects grid, research items, footer, and every media query (breakpoints at 1000px, 670px, 600px).
 - `css/utilities.css` — buttons, theme toggle, `.container`, `.header-container`, and `.card` styling including project background images.
-- `js/script.js` — hamburger menu, theme toggle, footer year.
+- `js/script.js` — hamburger menu, theme toggle, footer year, project detail dialog.
 
 Each content section follows the same shape: a `.division` rule, a `.content-text` heading block, an `<article>` of items, then a "See More" `.btn-secondary`.
 
-The split between the two stylesheets has drifted — `.content-text` and `.division` are defined in both files, and `style.css` (loaded second) wins. Check both before adding a rule.
+The split between the two stylesheets has drifted — `.content-text` and `.division` are defined in both files. `index.html` loads `style.css` first and `utilities.css` second, so **`utilities.css` wins** on equal specificity. Check both before adding a rule.
 
-## Projects grid — image coupling
+## Projects grid — card images
 
-`article.project` is a CSS grid (3 columns, 2 under 1000px, 1 under 600px). Project cards carry **no `<img>` element**. Each card's image is assigned by DOM position in `css/utilities.css`:
+`article.project` is a CSS grid (3 columns, 2 under 1000px, 1 under 600px). Project cards carry **no `<img>` element**. Each card's image is bound to an explicit class in `css/utilities.css`:
 
 ```css
-.card:nth-child(1) { background: url(../assets/project/gamification.png) center center/cover; }
-/* … through nth-child(9) */
+.card-gamification { background: url(../assets/project/gamification.png) center center/cover; }
 ```
 
-**Reordering, inserting, or removing a project silently reassigns the image of every card after it.** When changing the project list, update the matching `nth-child` block in the same commit.
+The card in `index.html` carries that class alongside `.card`:
 
-Card internals: an empty `.card-wrapper` overlay, a `.project-info` block absolutely pinned to the card bottom holding the title and tags, and two `.project-link` icons. Those icons are all `href="#"` placeholders and are not wired to real URLs.
+```html
+<div class="card card-gamification">
+```
+
+This replaced an earlier `.card:nth-child(n)` scheme where images were assigned by DOM position, so inserting or reordering a project silently reassigned every image after it. Reordering is now safe. **When you add a project, add its class rule in the same commit** — a card with no image class gets no background.
+
+Card internals: an empty `.card-wrapper` overlay and a `.project-info` block absolutely pinned to the card bottom holding the title and tags. Note that `.project-bio` paints over `.project-link`, so the `href="#"` icon placeholders on the older cards are invisible as well as unwired.
+
+## Project detail dialog
+
+Cards that open a detail dialog carry `data-details="<key>"` plus `role="button"` and `tabindex="0"`, and contain a `<template data-details-for="<key>">` holding the detail copy. The `#project-modal` shell sits just before `<footer>`; `js/script.js` clones the matching template into it on click or Enter/Space, and handles Escape, backdrop click, scroll lock, focus return, and a Tab focus trap.
+
+**All detail copy lives in `index.html` inside those templates** — it is plain markup, edit it directly. A card without `data-details` is simply not clickable, which is the current state of the nine older projects.
+
+Styling hooks: `.detail-eyebrow`, `.detail-title`, `.detail-list`, `.detail-metrics` / `.detail-metric`, `.detail-tags`. Because `.project-modal` sets `display: flex`, it also needs an explicit `.project-modal[hidden] { display: none; }` rule — do not remove it.
 
 ## Theming
 
 Light/dark runs entirely on CSS variables. `:root` in `css/style.css` holds the light palette; the `[data-theme="dark"]` block below it overrides the same names. `switchTheme` in `js/script.js` sets `data-theme` on `<html>` and persists the choice to `localStorage` under the key `theme`, which is re-applied on load.
 
-Add new colors as variables in **both** blocks rather than hardcoding hex values, or the element will not respond to the toggle. Note that `switchTheme` is defined twice in `script.js`; the second definition (the one that writes to `localStorage`) is the one that runs.
+Add new colors as variables in **both** blocks rather than hardcoding hex values, or the element will not respond to the toggle. The EliseAI brand accent follows this: `--elise-violet` is tuned per theme (`#7638fb` light, `#a880ff` dark) while `--elise-violet-static` stays fixed for use on the always-dark project cards. Note that `switchTheme` is defined twice in `script.js`; the second definition (the one that writes to `localStorage`) is the one that runs.

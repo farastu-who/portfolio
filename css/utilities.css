@@ -164,51 +164,218 @@ h2::selection {
   opacity: 1;
 }
 
-/* Project Images */
+/* Project Images
+   Each card's image is bound to its own class rather than its position, so
+   inserting or reordering a project in index.html no longer reassigns the
+   image of every card after it. Add a class here when you add a card. */
 
-/* project 1 */
-.card:nth-child(1) {
+/* EliseAI */
+.card-elise-crm {
+  background: url(../assets/project/elise-crm-discovery.svg) center center/cover;
+}
+
+.card-elise-reporting {
+  background: url(../assets/project/elise-reporting-architecture.svg) center center/cover;
+}
+
+.card-elise-golive {
+  background: url(../assets/project/elise-golive-pipeline.svg) center center/cover;
+}
+
+/* Earlier work */
+.card-gamification {
   background: url(../assets/project/gamification.png) center center/cover;
 }
 
-/* Project 2 */
-.card:nth-child(2) {
+.card-intersectional-fairness {
   background: url(../assets/project/IF.png) center center/cover;
 }
 
-/* Project 3 */
-.card:nth-child(3) {
+.card-transmission-lines {
   background: url(../assets/project/tl.png) center center/cover;
 }
 
-/* Project 4 */
-.card:nth-child(4) {
+.card-referral {
   background: url(../assets/project/referral.png) center center/cover;
 }
 
-/* Project 5 */
-.card:nth-child(5) {
+.card-easynet {
   background: url(../assets/project/easynet.png) center center/cover;
 }
 
-/* Project 6 */
-.card:nth-child(6) {
+.card-tiktok {
   background: url(../assets/project/tiktok.png) center center/cover;
 }
 
-/* Project 7 */
-.card:nth-child(7) {
+.card-gpstar {
   background: url(../assets/project/gpstar.png) center center/cover;
 }
 
-/* Project 8 */
-.card:nth-child(8) {
+.card-digital-partnerships {
   background: url(../assets/project/uber.png) center center/cover;
 }
 
-/* Project 9 */
-.card:nth-child(9) {
+.card-polar-bear {
   background: url(../assets/project/polar.png) center center/cover;
+}
+
+/* Cards that open a detail dialog */
+.card[data-details]:focus-visible {
+  outline: 3px solid var(--elise-violet);
+  outline-offset: 3px;
+}
+
+.project-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--elise-violet-static);
+}
+
+.card[data-details]:hover .project-cue i {
+  transform: translateX(4px);
+}
+
+.project-cue i {
+  transition: transform 0.25s ease-in-out;
+}
+
+/* Project detail dialog */
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* .project-modal sets display:flex, so hidden needs an explicit override */
+.project-modal[hidden] {
+  display: none;
+}
+
+.project-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.project-modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 2.5rem 2rem 2rem;
+  border-radius: 10px;
+  border-top: 5px solid var(--elise-violet);
+  background: var(--bg-primary);
+  color: var(--text-color);
+  box-shadow: var(--shadow);
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--card-background);
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.project-modal-close:hover {
+  background: var(--elise-violet);
+  color: #ffffff;
+}
+
+.detail-eyebrow {
+  font-size: 0.75rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--elise-violet);
+}
+
+.detail-title {
+  margin: 0.35rem 0 1.25rem;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.detail-list {
+  list-style: none;
+  margin: 0 0 1.5rem;
+}
+
+.detail-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.55;
+}
+
+.detail-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--elise-violet);
+}
+
+.detail-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-metric {
+  flex: 1 1 140px;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  background: var(--elise-violet-soft);
+}
+
+.detail-metric strong {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.1;
+  color: var(--elise-violet);
+}
+
+.detail-metric span {
+  font-size: 0.8rem;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.detail-tags li {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--elise-violet);
+  border-radius: 30px;
+  font-size: 0.75rem;
+  color: var(--elise-violet);
 }
 
 /* Media Queries */
@@ -220,5 +387,19 @@ h2::selection {
 
   .content-text h2 {
     font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-modal {
+    padding: 0.75rem;
+  }
+
+  .project-modal-dialog {
+    padding: 2.25rem 1.25rem 1.5rem;
+  }
+
+  .detail-title {
+    font-size: 1.25rem;
   }
 }

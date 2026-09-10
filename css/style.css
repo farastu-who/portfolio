@@ -18,6 +18,12 @@
   --card-background: #f4f4f4;
   --bg-secondary-two: #111111;
 
+  /* EliseAI brand accent. --elise-violet is tuned per theme for contrast;
+     --elise-violet-static stays fixed for use on the dark project cards. */
+  --elise-violet: #7638fb;
+  --elise-violet-static: #7638fb;
+  --elise-violet-soft: rgba(118, 56, 251, 0.1);
+
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 
   /* Font Weight */
@@ -40,6 +46,9 @@
   --bg-secondary: #ffffff;
   --card-background: #111111;
   --bg-secondary-two: #f4f4f4;
+  --elise-violet: #a880ff;
+  --elise-violet-static: #7638fb;
+  --elise-violet-soft: rgba(168, 128, 255, 0.16);
   --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
   --research-text-color: #ffffff;
 }
