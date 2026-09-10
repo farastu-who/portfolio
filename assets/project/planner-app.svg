@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img"
+     aria-label="Abstract motif: a calendar grid with scheduled and completed items">
+  <defs><linearGradient id="plBg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#10403C"/><stop offset="1" stop-color="#07211F"/>
+  </linearGradient></defs>
+  <rect width="800" height="600" fill="url(#plBg)"/>
+  <rect x="150" y="120" width="500" height="380" rx="18" fill="#FFFFFF" opacity="0.07"/>
+  <rect x="150" y="120" width="500" height="66" rx="18" fill="#4DBEB4" opacity="0.85"/>
+  <g fill="#FFFFFF" opacity="0.9">
+    <circle cx="212" cy="110" r="9"/><circle cx="588" cy="110" r="9"/>
+  </g>
+  <g stroke="#8CD5CF" stroke-width="2" opacity="0.35">
+    <path d="M150 260 H650 M150 340 H650 M150 420 H650"/>
+    <path d="M270 186 V500 M390 186 V500 M510 186 V500"/>
+  </g>
+  <rect x="286" y="212" width="88" height="32" rx="8" fill="#8CD5CF" opacity="0.75"/>
+  <rect x="166" y="292" width="88" height="32" rx="8" fill="#8CD5CF" opacity="0.55"/>
+  <rect x="526" y="372" width="108" height="32" rx="8" fill="#4DBEB4"/>
+  <g stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M418 300 l13 14 l26 -30"/>
+    <path d="M298 440 l13 14 l26 -30"/>
+  </g>
+  <circle cx="580" cy="300" r="20" fill="none" stroke="#8CD5CF" stroke-width="4" opacity="0.7"/>
+</svg>

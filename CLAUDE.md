@@ -39,6 +39,7 @@ Do not add a Jekyll theme or front matter to `index.html`. Its `<html>`/`<head>`
 
 Everything lives in three files:
 
+- `assets/Paresha_Farastu_Resume.pdf` — the resume the navbar RESUME button links to. Replacing the resume means overwriting this file; the button href needs no change.
 - `index.html` — all content, hardcoded. Sections in order: `#hero` (fixed navbar + profile), `#projects`, `#research`, `#others` (reuses the `.research-container` classes), `#footer`.
 - `css/style.css` — CSS custom properties, reset, navbar, hero, the projects grid, research items, footer, and every media query (breakpoints at 1000px, 670px, 600px).
 - `css/utilities.css` — buttons, theme toggle, `.container`, `.header-container`, and `.card` styling including project background images.
@@ -72,9 +73,11 @@ Card internals: an empty `.card-wrapper` overlay and a `.project-info` block abs
 
 Cards that open a detail dialog carry `data-details="<key>"` plus `role="button"` and `tabindex="0"`, and contain a `<template data-details-for="<key>">` holding the detail copy. The `#project-modal` shell sits just before `<footer>`; `js/script.js` clones the matching template into it on click or Enter/Space, and handles Escape, backdrop click, scroll lock, focus return, and a Tab focus trap.
 
-**All detail copy lives in `index.html` inside those templates** — it is plain markup, edit it directly. A card without `data-details` is simply not clickable, which is the current state of the nine older projects.
+**All detail copy lives in `index.html` inside those templates** — it is plain markup, edit it directly. A card without `data-details` is simply not clickable — currently only Polar Bear, which has no sourced write-up.
 
-Styling hooks: `.detail-eyebrow`, `.detail-title`, `.detail-list`, `.detail-metrics` / `.detail-metric`, `.detail-tags`. Because `.project-modal` sets `display: flex`, it also needs an explicit `.project-modal[hidden] { display: none; }` rule — do not remove it.
+Styling hooks: `.detail-eyebrow`, `.detail-title`, `.detail-list`, `.detail-metrics` / `.detail-metric`, `.detail-links`, `.detail-tags`. The `.detail-metrics` and `.detail-links` blocks are optional — omit them for a project with no headline numbers or no public repo.
+
+Accent colour: the dialog sets `--detail-accent` (and `--detail-soft`) and every detail rule reads from it. It defaults to the site teal; a card with `data-brand="elise"` has that value copied onto the dialog by `script.js`, and `.project-modal[data-brand="elise"]` swaps in the EliseAI violet. To add another brand accent, add a `data-brand` value and one CSS block — do not hardcode a colour into the `.detail-*` rules. Because `.project-modal` sets `display: flex`, it also needs an explicit `.project-modal[hidden] { display: none; }` rule — do not remove it.
 
 ## Theming
 

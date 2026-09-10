@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img"
+     aria-label="Abstract motif: an evaluation signal passing through quality gates">
+  <defs><linearGradient id="ppBg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0F3D3A"/><stop offset="1" stop-color="#08201F"/>
+  </linearGradient></defs>
+  <rect width="800" height="600" fill="url(#ppBg)"/>
+  <path d="M60 300 H190 l30 -95 l38 190 l34 -135 l30 40 H470" fill="none"
+        stroke="#4DBEB4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="none" stroke="#8CD5CF" stroke-width="3" opacity="0.55">
+    <rect x="500" y="150" width="110" height="90" rx="12"/>
+    <rect x="500" y="260" width="110" height="90" rx="12"/>
+    <rect x="500" y="370" width="110" height="90" rx="12"/>
+  </g>
+  <g stroke="#4DBEB4" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M528 195 l14 15 l26 -30"/><path d="M528 305 l14 15 l26 -30"/>
+  </g>
+  <path d="M534 400 l42 42 M576 400 l-42 42" stroke="#8CD5CF" stroke-width="5" stroke-linecap="round"/>
+  <g stroke="#8CD5CF" stroke-width="2" opacity="0.4" fill="none">
+    <path d="M610 195 H700 V415 H610"/>
+  </g>
+  <circle cx="700" cy="305" r="16" fill="#4DBEB4"/>
+</svg>

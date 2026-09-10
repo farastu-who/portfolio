@@ -219,6 +219,23 @@ h2::selection {
   background: url(../assets/project/polar.png) center center/cover;
 }
 
+/* Personal & research projects */
+.card-promptpulse {
+  background: url(../assets/project/promptpulse.svg) center center/cover;
+}
+
+.card-msp-recsys {
+  background: url(../assets/project/msp-recsys.svg) center center/cover;
+}
+
+.card-inventory {
+  background: url(../assets/project/inventory-system.svg) center center/cover;
+}
+
+.card-planner {
+  background: url(../assets/project/planner-app.svg) center center/cover;
+}
+
 /* EliseAI wordmark.
    The supplied asset is a black mark, so it is inverted to white over the
    dark project cards, and inverted again in dark mode inside the dialog. */
@@ -245,7 +262,7 @@ h2::selection {
 
 /* Cards that open a detail dialog */
 .card[data-details]:focus-visible {
-  outline: 3px solid var(--elise-violet);
+  outline: 3px solid var(--primary-color);
   outline-offset: 3px;
 }
 
@@ -258,6 +275,10 @@ h2::selection {
   font-weight: var(--weight-semibold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--teal-static);
+}
+
+.card[data-brand="elise"] .project-cue {
   color: var(--elise-violet-static);
 }
 
@@ -292,6 +313,8 @@ h2::selection {
 }
 
 .project-modal-dialog {
+  --detail-accent: var(--detail-accent-default);
+  --detail-soft: var(--detail-soft-default);
   position: relative;
   width: 100%;
   max-width: 640px;
@@ -299,7 +322,7 @@ h2::selection {
   overflow-y: auto;
   padding: 2.5rem 2rem 2rem;
   border-radius: 10px;
-  border-top: 5px solid var(--elise-violet);
+  border-top: 5px solid var(--detail-accent);
   background: var(--bg-primary);
   color: var(--text-color);
   box-shadow: var(--shadow);
@@ -320,8 +343,13 @@ h2::selection {
   transition: 0.25s ease-in-out;
 }
 
+.project-modal[data-brand="elise"] .project-modal-dialog {
+  --detail-accent: var(--elise-violet);
+  --detail-soft: var(--elise-violet-soft);
+}
+
 .project-modal-close:hover {
-  background: var(--elise-violet);
+  background: var(--detail-accent);
   color: #ffffff;
 }
 
@@ -330,7 +358,7 @@ h2::selection {
   font-weight: var(--weight-bold);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--elise-violet);
+  color: var(--detail-accent);
 }
 
 .detail-title {
@@ -359,7 +387,7 @@ h2::selection {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--elise-violet);
+  background: var(--detail-accent);
 }
 
 .detail-metrics {
@@ -373,18 +401,40 @@ h2::selection {
   flex: 1 1 140px;
   padding: 0.9rem 1rem;
   border-radius: 8px;
-  background: var(--elise-violet-soft);
+  background: var(--detail-soft);
 }
 
 .detail-metric strong {
   display: block;
   font-size: 1.6rem;
   line-height: 1.1;
-  color: var(--elise-violet);
+  color: var(--detail-accent);
 }
 
 .detail-metric span {
   font-size: 0.8rem;
+}
+
+.detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: var(--weight-semibold);
+  color: var(--detail-accent);
+  border-bottom: 1px solid transparent;
+  transition: 0.2s ease-in-out;
+}
+
+.detail-links a:hover {
+  border-bottom-color: var(--detail-accent);
 }
 
 .detail-tags {
@@ -396,10 +446,10 @@ h2::selection {
 
 .detail-tags li {
   padding: 0.35rem 0.8rem;
-  border: 1px solid var(--elise-violet);
+  border: 1px solid var(--detail-accent);
   border-radius: 30px;
   font-size: 0.75rem;
-  color: var(--elise-violet);
+  color: var(--detail-accent);
 }
 
 /* Media Queries */

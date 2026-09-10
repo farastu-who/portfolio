@@ -24,6 +24,12 @@
   --elise-violet-static: #7638fb;
   --elise-violet-soft: rgba(118, 56, 251, 0.1);
 
+  /* Detail-dialog accent. Defaults to the site teal, darkened for contrast
+     on white; EliseAI projects override it with the brand violet. */
+  --detail-accent-default: #1f7a72;
+  --detail-soft-default: rgba(31, 122, 114, 0.1);
+  --teal-static: #1f7a72;
+
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 
   /* Font Weight */
@@ -49,6 +55,9 @@
   --elise-violet: #a880ff;
   --elise-violet-static: #7638fb;
   --elise-violet-soft: rgba(168, 128, 255, 0.16);
+  --detail-accent-default: #6fd3c9;
+  --detail-soft-default: rgba(111, 211, 201, 0.14);
+  --teal-static: #1f7a72;
   --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
   --research-text-color: #ffffff;
 }

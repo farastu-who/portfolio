@@ -106,7 +106,7 @@
             <li>
               <a
                 class="nav-link btn btn-primary"
-                href="https://drive.google.com/file/d/1rNjCbIGux6GZYbjVf8e6Cbz0A-SrC_Jn/view?usp=sharing"
+                href="assets/Paresha_Farastu_Resume.pdf"
                 target="_blank"
                 >RESUME <i class="fas fa-arrow-right"></i
               ></a>
@@ -174,7 +174,7 @@
       <article class="project">
 
         <!-- EliseAI 1 -->
-        <div class="card card-elise-crm" data-details="elise-crm"
+        <div class="card card-elise-crm" data-details="elise-crm" data-brand="elise"
              role="button" tabindex="0" aria-haspopup="dialog">
           <div class="card-wrapper"></div>
           <img class="card-logo" src="assets/project/eliseai-logo.svg" alt="EliseAI" />
@@ -209,7 +209,7 @@
         </div>
 
         <!-- EliseAI 2 -->
-        <div class="card card-elise-reporting" data-details="elise-reporting"
+        <div class="card card-elise-reporting" data-details="elise-reporting" data-brand="elise"
              role="button" tabindex="0" aria-haspopup="dialog">
           <div class="card-wrapper"></div>
           <img class="card-logo" src="assets/project/eliseai-logo.svg" alt="EliseAI" />
@@ -248,7 +248,7 @@
         </div>
 
         <!-- EliseAI 3 -->
-        <div class="card card-elise-golive" data-details="elise-golive"
+        <div class="card card-elise-golive" data-details="elise-golive" data-brand="elise"
              role="button" tabindex="0" aria-haspopup="dialog">
           <div class="card-wrapper"></div>
           <img class="card-logo" src="assets/project/eliseai-logo.svg" alt="EliseAI" />
@@ -286,132 +286,324 @@
             </ul>
           </template>
         </div>
+
+        <!-- PromptPulse -->
+        <div class="card card-promptpulse" data-details="promptpulse"
+             role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="card-wrapper"></div>
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>PromptPulse</h3>
+              <p>LLMOps &middot; Python, Kubernetes, Terraform</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+          <template data-details-for="promptpulse">
+          <p class="detail-eyebrow">Personal Project</p>
+          <h3 class="detail-title">PromptPulse &mdash; Self-Hostable LLMOps Platform</h3>
+          <ul class="detail-list">
+            <li>Built a self-hostable LLMOps platform for RAG evaluation CI/CD, prompt drift detection, and retrieval quality monitoring.</li>
+            <li>Exposed eval runs and retrieval traces to agentic AI clients over MCP, so LLM agents can trigger and interpret evaluations directly.</li>
+            <li>Automated eval pipelines with GitHub Actions and Kubernetes CronJobs.</li>
+            <li>Instrumented the stack with OpenTelemetry, Prometheus, and Grafana for observability.</li>
+          </ul>
+          <ul class="detail-tags">
+            <li>Python</li>
+            <li>Postgres + pgvector</li>
+            <li>Terraform</li>
+            <li>Kubernetes</li>
+            <li>MCP</li>
+            <li>RAG</li>
+          </ul>
+          </template>
+        </div>
+
         <!-- Project 1 -->
-        <div class="card card-gamification">
+        <div class="card card-gamification" data-details="mygp-gamification"
+             role="button" tabindex="0" aria-haspopup="dialog">
+          <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+          <template data-details-for="mygp-gamification">
+          <p class="detail-eyebrow">Grameenphone &middot; MyGP</p>
+          <h3 class="detail-title">MyGP Gamification</h3>
+          <ul class="detail-list">
+            <li>Shipped interactive, gamified in-app experiences on MyGP, Grameenphone&rsquo;s consumer super-app with 16M+ monthly active users.</li>
+            <li>Ran challenge-and-reward campaigns that gave users a concrete goal and a prize to play for.</li>
+            <li>Led a 20-person cross-functional team spanning engineering, design, marketing, legal, and external partners.</li>
+            <li>Improved engagement 9% within two quarters.</li>
+          </ul>
+          <div class="detail-metrics">
+            <div class="detail-metric"><strong>16M+</strong><span>monthly active users</span></div>
+            <div class="detail-metric"><strong>9%</strong><span>engagement lift</span></div>
+            <div class="detail-metric"><strong>20</strong><span>person team</span></div>
+          </div>
+          <ul class="detail-tags">
+            <li>Product Design</li>
+            <li>UX</li>
+            <li>Gamification</li>
+            <li>Cross-functional Leadership</li>
+          </ul>
+          </template>
           <div class="card-wrapper"></div>
           <div class="project-info">
             <div class="project-bio">
               <h3>MyGP Gamification</h3>
               <p>UX, Product Design, SaaS</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
             </div>
 
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
           </div>
           <div class="card-image"></div>
         </div>
 
         <!-- Project 2 -->
-        <div class="card card-intersectional-fairness">
+        <div class="card card-intersectional-fairness" data-details="intersectional-fairness"
+             role="button" tabindex="0" aria-haspopup="dialog">
+          <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+          <template data-details-for="intersectional-fairness">
+          <p class="detail-eyebrow">CU Boulder &middot; INFO 5612</p>
+          <h3 class="detail-title">Intersectional Fairness in Recommendation</h3>
+          <ul class="detail-list">
+            <li>Investigated whether reranking for the proportional fairness of individual protected groups still holds at the intersections of those groups.</li>
+            <li>Built on the Kiva crowdfunding dataset, using loan size, country, and gender as protected attributes.</li>
+            <li>Ran baseline experiments across 3 agent allocations and 4 allocation mechanisms, evaluated with L1 and L2 norms.</li>
+            <li>Formed intersectional subgroups and compared their outcomes against the single-attribute baselines.</li>
+          </ul>
+          <div class="detail-metrics">
+            <div class="detail-metric"><strong>3</strong><span>protected attributes</span></div>
+            <div class="detail-metric"><strong>4</strong><span>allocation mechanisms</span></div>
+          </div>
+          <div class="detail-links">
+            <a href="https://github.com/farastu-who/RecSys_Intersectional" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>View repository</a>
+          </div>
+          <ul class="detail-tags">
+            <li>Fairness-aware ML</li>
+            <li>Recommender Systems</li>
+            <li>Python</li>
+            <li>TensorFlow</li>
+          </ul>
+          </template>
           <div class="card-wrapper"></div>
           <div class="project-info">
             <div class="project-bio">
               <h3>Intersectional Fairness</h3>
               <p>Data Manipulation, Fairness Metrics, Tensorflow</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
             </div>
 
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
           </div>
         </div>
 
         <!-- Porject 3 -->
-        <div class="card card-transmission-lines">
+        <div class="card card-transmission-lines" data-details="transmission-lines"
+             role="button" tabindex="0" aria-haspopup="dialog">
+          <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+          <template data-details-for="transmission-lines">
+          <p class="detail-eyebrow">Hitachi Energy &middot; Velocity Suite</p>
+          <h3 class="detail-title">Image Classification of Transmission Lines</h3>
+          <ul class="detail-list">
+            <li>Built a framework for integrating deep learning models into spatial data analysis, focused on identifying power grid lines and transmission towers in satellite imagery.</li>
+            <li>Trained a CNN classifier with TensorFlow and Keras on Google Colab GPUs, reaching 65% accuracy.</li>
+            <li>Worked from the public TTPLA dataset &mdash; 1,100 aerial images at 3,840&times;2,160 with 8,987 hand-labelled tower and power-line instances.</li>
+            <li>Documented dataset selection, annotation, and bounding-box labelling as a reusable framework for later spatial-data models.</li>
+          </ul>
+          <div class="detail-metrics">
+            <div class="detail-metric"><strong>65%</strong><span>classification accuracy</span></div>
+            <div class="detail-metric"><strong>8,987</strong><span>labelled instances</span></div>
+          </div>
+          <div class="detail-links">
+            <a href="https://github.com/farastu-who/GIS-DL" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>View repository</a>
+          </div>
+          <ul class="detail-tags">
+            <li>CNN</li>
+            <li>TensorFlow</li>
+            <li>Keras</li>
+            <li>Satellite Imagery</li>
+            <li>Python</li>
+          </ul>
+          </template>
           <div class="card-wrapper"></div>
           <div class="project-info">
             <div class="project-bio">
               <h3>Image Classification of Transmission Lines</h3>
               <p>CNN, Python, Tensorflow, Satellite Data</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
             </div>
 
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
           </div>
         </div>
 
         <!-- Project 4 -->
-        <div class="card card-referral">
+        <div class="card card-referral" data-details="mygp-referral"
+             role="button" tabindex="0" aria-haspopup="dialog">
+          <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+          <template data-details-for="mygp-referral">
+          <p class="detail-eyebrow">Grameenphone &middot; MyGP</p>
+          <h3 class="detail-title">MyGP Referral</h3>
+          <ul class="detail-list">
+            <li>Drove product-led growth through referral campaigns that reached 1M+ new users.</li>
+            <li>Built the business case and pricing model, and shaped the campaign&rsquo;s brand identity.</li>
+            <li>Applied funnel optimization and SEO/ASO experimentation to lift acquisition and conversion rates.</li>
+          </ul>
+          <div class="detail-metrics">
+            <div class="detail-metric"><strong>1M+</strong><span>new users reached</span></div>
+          </div>
+          <ul class="detail-tags">
+            <li>Product-Led Growth</li>
+            <li>Pricing &amp; Packaging</li>
+            <li>Funnel Optimization</li>
+            <li>ReactJS</li>
+          </ul>
+          </template>
           <div class="card-wrapper"></div>
           <div class="project-info">
             <div class="project-bio">
               <h3>MyGP Referral</h3>
               <p>Business Case & Pricing, Brand Identity, ReactJS</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
             </div>
 
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
           </div>
         </div>
 
         <!-- Project 5 -->
-        <div class="card card-easynet">
+        <div class="card card-easynet" data-details="easynet"
+             role="button" tabindex="0" aria-haspopup="dialog">
+          <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+          <template data-details-for="easynet">
+          <p class="detail-eyebrow">Grameenphone &middot; Easynet</p>
+          <h3 class="detail-title">Easynet</h3>
+          <ul class="detail-list">
+            <li>Redesigned Easynet, a zero-rated platform that meets users at their zero moment of truth with data pack offers.</li>
+            <li>Integrated partner services including Gamebox and 0.facebook.</li>
+            <li>Revised packaging and onboarding, supporting 66% revenue growth.</li>
+            <li>Won Grameenphone&rsquo;s Divisional Excellence Award twice, in 2020 and 2021, for this work.</li>
+          </ul>
+          <div class="detail-metrics">
+            <div class="detail-metric"><strong>66%</strong><span>revenue growth</span></div>
+            <div class="detail-metric"><strong>2&times;</strong><span>excellence award</span></div>
+          </div>
+          <ul class="detail-tags">
+            <li>AWS</li>
+            <li>UX</li>
+            <li>SecOps</li>
+            <li>Pricing &amp; Packaging</li>
+            <li>Stakeholder Management</li>
+          </ul>
+          </template>
           <div class="card-wrapper"></div>
           <div class="project-info">
             <div class="project-bio">
               <h3>Easynet</h3>
               <p>AWS, UX, Secops, Stakeholder Management</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
             </div>
 
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
           </div>
         </div>
 
         <!-- Project 6 -->
-        <div class="card card-tiktok">
+        <div class="card card-tiktok" data-details="tiktok-recsys"
+             role="button" tabindex="0" aria-haspopup="dialog">
+          <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+          <template data-details-for="tiktok-recsys">
+          <p class="detail-eyebrow">CU Boulder &middot; CSCI 5502 Online Communities</p>
+          <h3 class="detail-title">TikTok Recommender System</h3>
+          <ul class="detail-list">
+            <li>Reverse-engineered how TikTok&rsquo;s recommender works from folk theories and empirical investigation, mapping hypothesized consumer and provider workflows end to end.</li>
+            <li>Modelled the scoring mechanism over interaction signals &mdash; likes, comments, shares, follows, completion rate, and re-watch &mdash; weighted by predicted and estimated value.</li>
+            <li>Built two integer programming models in Gurobi as a post-processing plug-in: M1 guarantees each content provider a set number of recommendations, M2 spreads a provider&rsquo;s items across diverse user groups.</li>
+            <li>Applied Lagrangian relaxation to the complicating provider constraints to cut computational cost.</li>
+            <li>Evaluated on MovieLens &mdash; 943 users, 1,684 items, 25 providers &mdash; testing whether provider-constrained reranking counters filter bubbles and radicalized feeds.</li>
+            <li>Outlined a duo-audit moderation system pairing automated review with human review.</li>
+          </ul>
+          <div class="detail-metrics">
+            <div class="detail-metric"><strong>943</strong><span>users evaluated</span></div>
+            <div class="detail-metric"><strong>25</strong><span>content providers</span></div>
+            <div class="detail-metric"><strong>2</strong><span>optimization models</span></div>
+          </div>
+          <ul class="detail-tags">
+            <li>Constrained Optimization</li>
+            <li>Gurobi</li>
+            <li>Python</li>
+            <li>Recommender Systems</li>
+            <li>Content Moderation</li>
+          </ul>
+          </template>
           <div class="card-wrapper"></div>
           <div class="project-info">
             <div class="project-bio">
               <h3>TikTok Recommender System</h3>
               <p>Machine Learning, Python, Gurobi</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
             </div>
 
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
           </div>
         </div>
 
       <!-- Project 7 -->
-      <div class="card card-gpstar">
+      <div class="card card-gpstar" data-details="gp-star"
+           role="button" tabindex="0" aria-haspopup="dialog">
+        <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+        <template data-details-for="gp-star">
+        <p class="detail-eyebrow">Grameenphone &middot; GP Star</p>
+        <h3 class="detail-title">GP Star Loyalty Program</h3>
+        <ul class="detail-list">
+          <li>Architected the migration of the GP Star loyalty platform to microservices.</li>
+          <li>Redesigned the data model, the partner integration layer, and the pricing engine.</li>
+          <li>Lifted retention 23% and onboarded 35+ new revenue-generating partners.</li>
+        </ul>
+        <div class="detail-metrics">
+          <div class="detail-metric"><strong>+23%</strong><span>retention</span></div>
+          <div class="detail-metric"><strong>35+</strong><span>new partners</span></div>
+        </div>
+        <ul class="detail-tags">
+          <li>Microservices</li>
+          <li>Partnerships</li>
+          <li>A/B Testing</li>
+          <li>Pricing Engine</li>
+        </ul>
+        </template>
         <div class="card-wrapper"></div>
         <div class="project-info">
           <div class="project-bio">
             <h3>GP Star Loyalty Program</h3>
             <p>Partnerships, Microservices, A/B Testing</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
           </div>
 
-          <div class="project-link">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-          </div>
         </div>
       </div>
 
       <!-- Project 8 -->
-      <div class="card card-digital-partnerships">
+      <div class="card card-digital-partnerships" data-details="digital-partnerships"
+           role="button" tabindex="0" aria-haspopup="dialog">
+        <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+        <template data-details-for="digital-partnerships">
+        <p class="detail-eyebrow">Grameenphone &middot; MyGP</p>
+        <h3 class="detail-title">Digital Partnerships</h3>
+        <ul class="detail-list">
+          <li>Led API integrations with third-party partners, including Uber.</li>
+          <li>Managed technical requirements, commercial contracts, and go-to-market dependencies across sales and marketing stakeholders.</li>
+          <li>Ran SEO and ASO experimentation to improve acquisition and conversion.</li>
+        </ul>
+        <ul class="detail-tags">
+          <li>API Integration</li>
+          <li>Partnerships</li>
+          <li>SEO &amp; ASO</li>
+          <li>Firebase</li>
+          <li>Go-to-Market</li>
+        </ul>
+        </template>
         <div class="card-wrapper"></div>
         <div class="project-info">
           <div class="project-bio">
             <h3>Digital Partnerships</h3>
             <p>SEO & ASO, Marketing, Firebase</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
           </div>
 
-          <div class="project-link">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-          </div>
         </div>
       </div>
 
@@ -424,13 +616,115 @@
             <p>EO/IR, Requirements Allocation,Trade Study  </p>
           </div>
 
-          <div class="project-link">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-          </div>
         </div>
       </div>
 
+
+        <!-- Multistakeholder Recommendation -->
+        <div class="card card-msp-recsys" data-details="msp-recsys"
+             role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="card-wrapper"></div>
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Multistakeholder Recommendation</h3>
+              <p>Provider Constraints &middot; Gurobi, Python</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+          <template data-details-for="msp-recsys">
+          <p class="detail-eyebrow">Research Project</p>
+          <h3 class="detail-title">Multistakeholder Recommendation with Provider Constraints</h3>
+          <ul class="detail-list">
+            <li>Built integer programming models in Gurobi and Python to optimize recommendation sets under provider-side constraints.</li>
+            <li>Improved recommendation accuracy 18% while enforcing provider fairness.</li>
+            <li>Balanced consumer utility against provider and content diversity, addressing the long tail of providers whose items are routinely overlooked.</li>
+          </ul>
+          <div class="detail-metrics">
+            <div class="detail-metric"><strong>+18%</strong><span>accuracy</span></div>
+          </div>
+          <div class="detail-links">
+            <a href="https://github.com/farastu-who/MSP-RecSys" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>View repository</a>
+          </div>
+          <ul class="detail-tags">
+            <li>Gurobi</li>
+            <li>Python</li>
+            <li>Integer Programming</li>
+            <li>Fairness</li>
+          </ul>
+          </template>
+        </div>
+
+        <!-- Restaurant Inventory System -->
+        <div class="card card-inventory" data-details="inventory-system"
+             role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="card-wrapper"></div>
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Restaurant Inventory System</h3>
+              <p>Flask, RabbitMQ, Kubernetes, GCP</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+          <template data-details-for="inventory-system">
+          <p class="detail-eyebrow">CU Boulder &middot; Datacenter Scale Computing</p>
+          <h3 class="detail-title">Restaurant Inventory Management System</h3>
+          <ul class="detail-list">
+            <li>Built a real-time inventory management system for restaurants, with automated reordering and supplier email notifications.</li>
+            <li>Split the system into REST API servers for order creation and inventory status, plus worker processes for stock checks and reorder requests.</li>
+            <li>Flagged underperforming suppliers so reorders to them require manual approval before being sent.</li>
+            <li>Dockerized the application and automated deployment and scaling with Kubernetes on GCP.</li>
+          </ul>
+          <div class="detail-links">
+            <a href="https://github.com/farastu-who/Inventory-Management-System" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>View repository</a>
+          </div>
+          <ul class="detail-tags">
+            <li>Flask</li>
+            <li>RabbitMQ</li>
+            <li>Kubernetes</li>
+            <li>GCP</li>
+            <li>SQLite</li>
+            <li>Docker</li>
+          </ul>
+          </template>
+        </div>
+
+        <!-- Calendar Productivity App -->
+        <div class="card card-planner" data-details="planner-app"
+             role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="card-wrapper"></div>
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Calendar Productivity App</h3>
+              <p>Flask, SQLite, Heroku, GitHub Actions</p>
+              <span class="project-cue">View details <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Detail copy for the modal. Edit freely; nothing here is generated. -->
+          <template data-details-for="planner-app">
+          <p class="detail-eyebrow">Personal Project</p>
+          <h3 class="detail-title">Calendar-Based Productivity App</h3>
+          <ul class="detail-list">
+            <li>Designed a Flask and SQLite web app for managing tasks and reminders, with automatic soccer match scheduling.</li>
+            <li>Deployed on Heroku with continuous integration through GitHub Actions.</li>
+            <li>Covered the app with unit and integration tests.</li>
+          </ul>
+          <div class="detail-links">
+            <a href="https://github.com/farastu-who/flask-planner-app" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i>View repository</a>
+          </div>
+          <ul class="detail-tags">
+            <li>Flask</li>
+            <li>SQLite</li>
+            <li>Heroku</li>
+            <li>GitHub Actions</li>
+            <li>CI/CD</li>
+          </ul>
+          </template>
+        </div>
       </article>
 
       <a href="https://github.com/farastu-who" class="btn btn-secondary"
