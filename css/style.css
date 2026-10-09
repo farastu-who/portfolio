@@ -9,8 +9,8 @@
 /* variables */
 :root {
   /* Colors - single palette, no light/dark swap */
-  --primary-color: #4dbeb4;
-  --secondary-color: #8cd5cf;
+  --primary-color: #a8d5ba;
+  --secondary-color: #b8e6c8;
   --bg-primary: #141416;
   --text-color: #f0ede4;
   --text-muted: #c9c5ba;
@@ -25,9 +25,9 @@
 
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 
-  --detail-accent-default: #6fd3c9;
-  --detail-soft-default: rgba(111, 211, 201, 0.14);
-  --teal-static: #6fd3c9;
+  --detail-accent-default: #a8d5ba;
+  --detail-soft-default: rgba(168, 213, 186, 0.14);
+  --accent-pink: #f4c2d7;
 
   /* Font Weight */
   --weight-small: 400;
@@ -281,6 +281,12 @@ body {
   gap: 12px;
   list-style: none;
   margin-top: 14px;
+}
+
+#others .research-item h3,
+.industry-row i,
+.stat strong {
+  color: var(--primary-color);
 }
 
 /* At a Glance

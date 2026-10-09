@@ -40,7 +40,7 @@ h2::selection {
 
 .btn-primary {
   background: var(--primary-color);
-  color: #000000;
+  color: #10201b;
 }
 
 .btn-secondary {
@@ -227,7 +227,7 @@ h2::selection {
   font-weight: var(--weight-bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--detail-accent);
+  color: var(--accent-pink);
 }
 
 .detail-logo {
@@ -343,7 +343,7 @@ h2::selection {
   font-weight: var(--weight-bold);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--detail-accent);
+  color: var(--accent-pink);
 }
 
 .detail-title {
@@ -431,10 +431,10 @@ h2::selection {
 
 .detail-tags li {
   padding: 0.35rem 0.8rem;
-  border: 1px solid var(--detail-accent);
+  border: 1px solid var(--accent-pink);
   border-radius: 30px;
   font-size: 0.75rem;
-  color: var(--detail-accent);
+  color: var(--accent-pink);
 }
 
 /* Media Queries */
